@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub – Kiramel Studios</title>
+  
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/hub.css">
+  
+  <meta name="description" content="Hub – Navigate the Kiramel Studios experience.">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+<body>
+  <main class="hub">
+    <header class="hub-header">
+      <h1 class="hub-title">Kiramel Studios Hub</h1>
+      <p class="hub-subtitle">Navigate the Studio Experience</p>
+    </header>
+
+    <section class="hub-content">
+      <div class="sections-grid">
+        
+        <!-- Viewing Room: Current World -->
+        <div class="section-card" data-section="viewing-room">
+          <div class="card-header">
+            <h2 class="section-title">Viewing Room</h2>
+            <span class="lock-icon" style="display: none;">🔒</span>
+          </div>
+          <p class="section-description">
+            Explore the current world: <strong>Chasing the Sun</strong>
+          </p>
+          <p class="section-meta">
+            1980s-inspired aesthetic with neon visuals
+          </p>
+          <button class="section-link-btn" data-nav="viewing-room">
+            Enter World
+          </button>
+          <span class="lock-text"></span>
+        </div>
+
+        <!-- Explore Worlds -->
+        <div class="section-card" data-section="explore-worlds">
+          <div class="card-header">
+            <h2 class="section-title">Explore Worlds</h2>
+          </div>
+          <p class="section-description">
+            Browse past and present eras
+          </p>
+          <p class="section-meta">
+            Currently available: Chasing the Sun
+          </p>
+          <button class="section-link-btn" onclick="window.location.href='./explore-worlds.html'">
+            Browse Worlds
+          </button>
+        </div>
+
+        <!-- Lore Pack: Archive -->
+        <div class="section-card locked" data-section="lore-pack">
+          <div class="card-header">
+            <h2 class="section-title">Lore Pack</h2>
+            <span class="lock-icon">🔒</span>
+          </div>
+          <p class="section-description">
+            Original scripts, creative notes, and development materials
+          </p>
+          <p class="section-meta">
+            Unlocked after exploring a world
+          </p>
+          <button class="section-link-btn" data-nav="lore-pack">
+            Access Archive
+          </button>
+          <span class="lock-text">Explore a world first</span>
+        </div>
+
+        <!-- Community -->
+        <div class="section-card locked" data-section="community">
+          <div class="card-header">
+            <h2 class="section-title">Community</h2>
+            <span class="lock-icon">🔒</span>
+          </div>
+          <p class="section-description">
+            Thoughtful discussion and human connection
+          </p>
+          <p class="section-meta">
+            No voting, no algorithmic feeds
+          </p>
+          <button class="section-link-btn" data-nav="community">
+            Join Discussion
+          </button>
+          <span class="lock-text">Explore a world first</span>
+        </div>
+
+        <!-- Writers' Room -->
+        <div class="section-card locked" data-section="writers-room">
+          <div class="card-header">
+            <h2 class="section-title">Writers' Room</h2>
+            <span class="lock-icon">🔒</span>
+          </div>
+          <p class="section-description">
+            Fan-written stories, lore theories, and conceptual ideas
+          </p>
+          <p class="section-meta">
+            Requires account creation
+          </p>
+          <button class="section-link-btn" data-nav="writers-room">
+            Submit Work
+          </button>
+          <span class="lock-text">Create an account</span>
+        </div>
+
+        <!-- Casting Wing: Professional -->
+        <div class="section-card" data-section="casting-wing">
+          <div class="card-header">
+            <h2 class="section-title">Casting Wing</h2>
+          </div>
+          <p class="section-description">
+            Casting calls, collaboration opportunities, and professional submissions
+          </p>
+          <p class="section-meta">
+            Always open for applications
+          </p>
+          <button class="section-link-btn" data-nav="casting-wing">
+            View Opportunities
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="hub-footer">
+      <p style="font-size: var(--fs-body-sm); opacity: 0.6; text-align: center;">
+        Progress through the studio experience to unlock additional sections.
+      </p>
+    </footer>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

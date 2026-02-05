@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Worlds – Kiramel Studios Hub</title>
+  
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <style>
+    .explore-worlds {
+      background-color: #1a1a1a;
+      color: #f5f1ed;
+      min-height: 100vh;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    
+    .explore-header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+    
+    .explore-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin-bottom: var(--space-md);
+    }
+    
+    .worlds-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+    
+    .world-item {
+      background: rgba(245, 241, 237, 0.05);
+      border: 1px solid rgba(245, 241, 237, 0.1);
+      padding: var(--space-xl);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .world-item:hover {
+      background: rgba(245, 241, 237, 0.08);
+      border-color: rgba(245, 241, 237, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .world-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-heading-lg);
+      margin-bottom: var(--space-md);
+      color: #f5f1ed;
+    }
+    
+    .world-era {
+      font-family: var(--font-accent);
+      font-size: var(--fs-body-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #d4a574;
+      margin-bottom: var(--space-md);
+    }
+    
+    .world-description {
+      font-size: var(--fs-body-md);
+      line-height: var(--lh-relaxed);
+      opacity: 0.9;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .world-action {
+      display: inline-block;
+      padding: var(--space-md) var(--space-lg);
+      border: 2px solid #d4a574;
+      background: transparent;
+      color: #d4a574;
+      font-family: var(--font-accent);
+      font-size: var(--fs-body-sm);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .world-action:hover {
+      background: #d4a574;
+      color: #1a1a1a;
+    }
+    
+    .back-link {
+      margin-top: var(--space-3xl);
+      text-align: center;
+    }
+    
+    .back-link a {
+      color: #f5f1ed;
+      font-family: var(--font-accent);
+      font-size: var(--fs-body-sm);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+    
+    .back-link a:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <main class="explore-worlds">
+    <header class="explore-header">
+      <h1>Explore Worlds</h1>
+      <p style="opacity: 0.8;">Past and Present Eras</p>
+    </header>
+
+    <section class="worlds-list">
+      <!-- Chasing the Sun -->
+      <div class="world-item">
+        <p class="world-era">Current World</p>
+        <h2 class="world-title">Chasing the Sun</h2>
+        <p class="world-description">
+          1980s-inspired aesthetic. Neon-inflected visuals. Themes of movement, yearning, artificial warmth, and repetition. The active era featuring light distortion, scan lines, and chromatic aberration used deliberately to evoke a distinctive visual identity.
+        </p>
+        <button class="world-action" onclick="window.location.href='./viewing-room.html'">
+          Visit World
+        </button>
+      </div>
+
+      <!-- Future worlds placeholder -->
+      <div class="world-item" style="opacity: 0.5;">
+        <p class="world-era">Upcoming</p>
+        <h2 class="world-title">Future Worlds</h2>
+        <p class="world-description">
+          Additional eras and worlds are in development. Each will possess its own visual language, thematic exploration, and curated content. Return here as new eras are released.
+        </p>
+      </div>
+    </section>
+
+    <div class="back-link">
+      <a href="./hub.html">← Back to Hub</a>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

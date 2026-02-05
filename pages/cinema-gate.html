@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Gate – Kiramel Studios Hub</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/cinema-gate.css">
+  
+  <meta name="description" content="Experience the era trailer. Complete viewing to proceed.">
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+<body>
+  <main class="cinema-gate">
+    <div class="cinema-content">
+      <h1 class="cinema-title">Chasing the Sun</h1>
+      
+      <p class="cinema-countdown-label">World unlocks in</p>
+      <div class="cinema-countdown"><span id="countdown-timer">01:00</span></div>
+      
+      <div class="cinema-video-placeholder" data-cinema-video>
+        <!-- Trailer video placeholder -->
+      </div>
+      
+      <button class="cinema-button" onclick="CinemaGate.proceedToViewingRoom()">
+        Proceed to Viewing Room
+      </button>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

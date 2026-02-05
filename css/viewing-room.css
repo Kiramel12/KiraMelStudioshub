@@ -1,0 +1,355 @@
+/* Kiramel Studios Hub – Viewing Room (Chasing the Sun) */
+/* Deep burgundy, bone white accents, intimate atmosphere */
+
+.viewing-room {
+  background-color: var(--color-viewing-bg);
+  color: var(--color-viewing-accent-primary);
+  min-height: 100vh;
+  padding-bottom: var(--space-4xl);
+}
+
+.viewing-room-header {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  border-bottom: 1px solid rgba(245, 241, 237, 0.1);
+}
+
+.viewing-room-era-label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-viewing-accent-secondary);
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+}
+
+.viewing-room-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  color: var(--color-viewing-accent-primary);
+}
+
+.viewing-room-subtitle {
+  font-size: var(--fs-body-md);
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Primary Film/Trailer */
+.primary-film-section {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1000px;
+  margin: var(--space-3xl) auto 0;
+}
+
+.primary-film-label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-viewing-accent-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.primary-film {
+  width: 100%;
+  background: #1a0d13;
+  border: 1px solid rgba(245, 241, 237, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--space-2xl);
+}
+
+.primary-film video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Carousel Section */
+.carousel-section {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-viewing-accent-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.carousel-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-md);
+  margin-bottom: var(--space-xl);
+  color: var(--color-viewing-accent-primary);
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.carousel-viewport {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  background: #1a0d13;
+  border: 1px solid rgba(245, 241, 237, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item.inactive {
+  opacity: 0.6;
+}
+
+.carousel-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245, 241, 237, 0.5);
+  font-size: var(--fs-body-sm);
+  font-family: var(--font-accent);
+}
+
+.carousel-media-placeholder {
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.carousel-item-content {
+  padding: var(--space-lg);
+}
+
+.carousel-item-label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-viewing-accent-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.carousel-item-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-md);
+  margin-bottom: var(--space-sm);
+  color: var(--color-viewing-accent-primary);
+}
+
+.carousel-item-description {
+  font-size: var(--fs-body-sm);
+  opacity: 0.85;
+  line-height: var(--lh-relaxed);
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-xl);
+  gap: var(--space-md);
+}
+
+.carousel-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-viewing-accent-secondary);
+  background: transparent;
+  color: var(--color-viewing-accent-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.carousel-nav-button:hover:not(:disabled) {
+  background: var(--color-viewing-accent-secondary);
+  color: var(--color-viewing-bg);
+  transform: translateY(-2px);
+}
+
+.carousel-nav-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.carousel-indicators {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(212, 175, 142, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 142, 0.3);
+}
+
+.carousel-indicator.active {
+  background: var(--color-viewing-accent-secondary);
+  border-color: var(--color-viewing-accent-secondary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.carousel-indicator:hover {
+  background: var(--color-viewing-accent-secondary);
+  opacity: 0.8;
+}
+
+.carousel-counter {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-viewing-accent-secondary);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Info Section */
+.viewing-room-info {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1000px;
+  margin: var(--space-3xl) auto 0;
+  border-top: 1px solid rgba(245, 241, 237, 0.1);
+}
+
+.info-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+}
+
+.info-title {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-viewing-accent-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.info-content {
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-relaxed);
+  opacity: 0.85;
+}
+
+/* CTA Button */
+.viewing-room-cta {
+  padding: var(--space-2xl) var(--space-xl);
+  max-width: 1000px;
+  margin: var(--space-3xl) auto;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-xl);
+  border: 2px solid var(--color-viewing-accent-secondary);
+  background: transparent;
+  color: var(--color-viewing-accent-secondary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: var(--color-viewing-accent-secondary);
+  color: var(--color-viewing-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 142, 0.2);
+}
+
+/* Neon accent details (subtle, Chasing the Sun era) */
+.neon-accent {
+  color: var(--color-neon-pink);
+  opacity: 0.7;
+}
+
+.neon-accent-secondary {
+  color: var(--color-neon-blue);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .carousel-controls {
+    flex-wrap: wrap;
+  }
+  
+  .carousel-counter {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .viewing-room-header {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .viewing-room-title {
+    font-size: var(--fs-display-md);
+  }
+  
+  .primary-film-section,
+  .carousel-section,
+  .viewing-room-info {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .carousel-item-title {
+    font-size: var(--fs-heading-sm);
+  }
+  
+  .carousel-nav-button {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}

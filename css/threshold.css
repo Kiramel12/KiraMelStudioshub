@@ -1,0 +1,124 @@
+/* Kiramel Studios Hub – Threshold (Entry Page) */
+/* Black and white only. Stark, ritualized entry. */
+
+.threshold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.threshold-content {
+  text-align: center;
+  z-index: 10;
+  animation: thresholdFadeIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes thresholdFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.threshold-logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-xl);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+  line-height: 1.1;
+}
+
+.threshold-logo-placeholder {
+  width: 300px;
+  height: 300px;
+  margin: var(--space-lg) auto;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-body-sm);
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
+}
+
+.threshold-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-3xl);
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: var(--space-lg);
+}
+
+.threshold-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+}
+
+.threshold-button:active {
+  transform: translateY(0);
+}
+
+/* Background pattern (optional subtle grid) */
+.threshold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .threshold {
+    padding: var(--space-lg);
+  }
+  
+  .threshold-logo {
+    font-size: var(--fs-display-md);
+  }
+  
+  .threshold-logo-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .threshold-button {
+    font-size: var(--fs-body-sm);
+    padding: var(--space-md) var(--space-2xl);
+  }
+  
+  .threshold-button {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--fs-body-sm);
+  }
+}

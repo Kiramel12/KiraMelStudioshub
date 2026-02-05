@@ -1,0 +1,136 @@
+/* Kiramel Studios Hub – Cinema Gate (Trailer Gate) */
+/* Minimal centered layout with countdown timer */
+
+.cinema-gate {
+  background-color: var(--color-cinema-bg);
+  color: var(--color-cinema-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cinema-content {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  max-width: 900px;
+  width: 100%;
+}
+
+.cinema-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2xl);
+}
+
+.cinema-countdown-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  margin-bottom: var(--space-md);
+}
+
+.cinema-countdown {
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3xl);
+}
+
+.cinema-video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 800px;
+  margin: 0 auto var(--space-3xl);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.cinema-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-3xl);
+  border: 2px solid var(--color-cinema-text);
+  background: transparent;
+  color: var(--color-cinema-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cinema-button:hover {
+  background: var(--color-cinema-text);
+  color: var(--color-cinema-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245, 245, 240, 0.15);
+}
+
+.cinema-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cinema-content {
+    padding: var(--space-xl);
+  }
+  
+  .cinema-title {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .cinema-countdown-label {
+    font-size: var(--fs-body-sm);
+  }
+  
+  .cinema-countdown {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .cinema-video-placeholder {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .cinema-button {
+    padding: var(--space-md) var(--space-2xl);
+    font-size: var(--fs-body-sm);
+  }
+}
+@media (max-width: 768px) {
+  .cinema-header {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .cinema-title {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .cinema-content {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .cinema-video-wrapper {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .cinema-info {
+    margin-top: var(--space-lg);
+  }
+  
+  .cinema-footer {
+    padding: var(--space-lg) var(--space-md);
+  }
+}

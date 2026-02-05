@@ -1,0 +1,210 @@
+/* Kiramel Studios Hub – Hub Navigation Page */
+/* Clean card-based interface showing all available sections with lock states */
+
+.hub {
+  background-color: #1a1a1a;
+  color: #f5f1ed;
+  min-height: 100vh;
+  padding-bottom: var(--space-4xl);
+}
+
+.hub-header {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  border-bottom: 1px solid rgba(245, 241, 237, 0.1);
+}
+
+.hub-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  color: #f5f1ed;
+}
+
+.hub-subtitle {
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-md);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.hub-content {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+/* Section Cards */
+.section-card {
+  background: rgba(245, 241, 237, 0.05);
+  border: 1px solid rgba(245, 241, 237, 0.1);
+  padding: var(--space-xl);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.section-card:hover:not(.locked) {
+  background: rgba(245, 241, 237, 0.08);
+  border-color: rgba(245, 241, 237, 0.2);
+  transform: translateY(-2px);
+}
+
+.section-card.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-md);
+  font-weight: 700;
+  color: #f5f1ed;
+  margin: 0;
+}
+
+.lock-icon {
+  font-size: 20px;
+  display: none;
+  margin-left: var(--space-md);
+}
+
+.section-description {
+  font-size: var(--fs-body-md);
+  margin-bottom: var(--space-sm);
+  color: #f5f1ed;
+  font-weight: 500;
+}
+
+.section-meta {
+  font-size: var(--fs-body-sm);
+  opacity: 0.75;
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+/* Buttons */
+.section-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid rgba(245, 241, 237, 0.3);
+  background: transparent;
+  color: #f5f1ed;
+  font-family: var(--font-accent);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.section-card:not(.locked) .section-link-btn:hover {
+  border-color: #f5f1ed;
+  background: rgba(245, 241, 237, 0.1);
+  transform: translateY(-1px);
+}
+
+.section-card.locked .section-link-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lock-text {
+  font-size: var(--fs-body-xs);
+  color: #d4a574;
+  font-family: var(--font-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  display: none;
+}
+
+.section-card.locked .lock-text {
+  display: block;
+}
+
+/* Section-specific colors */
+.section-card[data-section="viewing-room"] {
+  border-color: rgba(212, 175, 142, 0.2);
+}
+
+.section-card[data-section="viewing-room"]:hover {
+  border-color: rgba(212, 175, 142, 0.4);
+}
+
+.section-card[data-section="casting-wing"] {
+  border-color: rgba(245, 241, 237, 0.15);
+  background: rgba(245, 241, 237, 0.03);
+}
+
+.section-card[data-section="casting-wing"]:hover {
+  border-color: rgba(245, 241, 237, 0.25);
+}
+
+/* Footer */
+.hub-footer {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  border-top: 1px solid rgba(245, 241, 237, 0.05);
+  margin-top: var(--space-2xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sections-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .hub-header {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .hub-title {
+    font-size: var(--fs-display-md);
+  }
+
+  .hub-content {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .section-card {
+    padding: var(--space-lg);
+  }
+
+  .section-title {
+    font-size: var(--fs-heading-sm);
+  }
+}
